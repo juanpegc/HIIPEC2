@@ -1,0 +1,17 @@
+@use "sass:color";
+/* stylelint-disable */
+@import "bootstrap/scss/bootstrap.scss";
+/* stylelint-enable */
+
+$uoc-corporate: #000078;
+$uoc-masterbrand: #73edff;
+
+$body-bg: $uoc-masterbrand;
+$body-color: $uoc-corporate;
+
+$footer-bg: $uoc-corporate;
+
+$theme-colors: (
+  "primary": $uoc-corporate,
+  "secondary": $uoc-masterbrand,
+);

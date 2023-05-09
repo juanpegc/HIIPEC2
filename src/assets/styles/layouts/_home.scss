@@ -1,0 +1,207 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+@supports not (display: grid) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #bottomNav {
+    display: flex;
+    justify-content: space-around;
+    border-top: $uoc-masterbrand 2px solid;
+  }
+
+  .navbar-brand {
+    color: $uoc-corporate;
+  }
+
+  ul {
+    margin: 50px;
+  }
+
+  ul li a {
+    color: $uoc-corporate;
+  }
+
+  #socials {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  footer {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: $uoc-corporate;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: auto auto 100px 100px;
+}
+
+#content {
+  text-align: justify;
+
+  a {
+    color: #7853fd;
+    text-decoration: none;
+  }
+}
+
+#bottomNav {
+  display: grid;
+  grid-template-columns: 120px auto 200px;
+  justify-content: space-around;
+  border-top: $uoc-masterbrand 2px solid;
+
+  .navbar-brand {
+    color: $uoc-corporate;
+  }
+
+  ul {
+    grid-gap: 5px;
+  }
+
+  ul li a {
+    color: $uoc-corporate;
+  }
+
+  #socials {
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    grid-gap: 20px;
+    justify-content: center;
+  }
+}
+
+article {
+  padding-inline: 100px;
+  font-family: "Poltawski Nowy", serif;
+  font-size: 1rem;
+  text-align: center;
+  background-color: $uoc-masterbrand;
+
+  #content a:hover {
+    text-decoration: underline;
+  }
+
+  blockquote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 75px;
+    font-size: 1.2rem;
+    font-style: italic;
+    border-bottom: 2px $uoc-corporate solid;
+  }
+}
+
+header {
+  padding-inline: 100px;
+  background-color: $uoc-corporate;
+
+  #navbar {
+    justify-content: space-between;
+  }
+}
+
+main {
+  padding-inline: 100px;
+  font-family: "Poltawski Nowy", serif;
+  font-size: 2rem;
+  text-align: center;
+
+  #team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .person {
+    flex-direction: column;
+    width: 300px;
+    margin: 2px;
+    text-align: center;
+    background-color: hsl(47, 86%, 45%);
+    border: $uoc-corporate 2px solid;
+    border-radius: 15px;
+  }
+
+  .person::first-line {
+    font-weight: 700;
+  }
+
+  #contact {
+    text-align: center;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 200px auto;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: white;
+  background-color: $uoc-corporate;
+
+  p {
+    margin: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    padding-inline: 1px;
+  }
+
+  .grid {
+    grid-template-rows: auto auto auto auto;
+  }
+
+  article {
+    padding-inline: 50px;
+  }
+
+  main {
+    padding-inline: 50px;
+  }
+
+  #bottomNav {
+    grid-template-columns: none;
+    text-align: center;
+  }
+
+  #bottomNav ul {
+    grid-gap: 1px;
+  }
+
+  #imageCite {
+    flex-direction: column;
+  }
+
+  footer {
+    grid-template-rows: 80px auto;
+    grid-template-columns: none;
+    justify-content: center;
+    text-align: center;
+  }
+}
